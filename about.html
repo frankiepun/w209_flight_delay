@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Flight Delay Analysis</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">Flights Delay Analysis</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="airline_executive.html">Airline Executive</a></li>
+      <li><a href="business_traveler.html">Business Traveler</a></li>
+	  <li><a href="about.html">About</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+	<h2>About the project</h2>
+  
+	<h3> Project Concept </h3>
+	<p>
+		In this project, we create various charts and displays for analyzing the flight delays in domestic 
+		flights in January 2019. Using a geographical map and other chart types, a business traveler can quickly identify 
+		which airports have the highest or lowest delay rate and which day of the week has the highest or 
+		the lowest rate of delay. Then, he can use this information to adjust his travel plan accordingly. 
+		Similarly, an airline executive can apply this knowledge to change the business plan to increase 
+		profits and improve customer satisfaction. 
+	</p>
+  
+	<h3> Project Contributors </h3>
+		<ul>
+			<li>Angela Guan</li>
+			<li>Vanesa Lee</li>
+			<li>Mariah Meehan</li>
+			<li>Jonathan Moges </li>
+			<li>Frankie Pun</li>
+			<li>Nitin Swarup Sokhey</li>
+		</ul>
+	
+	<h3> Individual Contribution </h3>
+	<p> 
+		Since we are working on a small dataset, our team collaborates closely on major design decisions. Each team member 
+		contributes to every aspect of the project - design, EDA, data integration, website construction, tableau implementation,
+		presentation, and testing. We communicate by slack channel and provide constructive feedback regularly. As a result, we agree that 
+		we share equal credits on all tasks. 
+	</p>
+	
+	<h3> Intended Audience </h3>	
+		<ul>
+			<li>Airline Executive</li>
+			<li>Business Traveler</li>
+		</ul>
+		
+	<h3> Project Goals </h3>
+		<p>
+		In this project, we aim to create some useful visualization to help the two intended audiences to answer the following questions.
+		</p>
+		<p> As an airline executive, you would like to:
+		<ul>
+			<li> Understand which flights have the highest and lowest rate of delay
+			<li> Identify the airports with the highest or lowest rate of delay
+			<li> Determine which day of the week has the highest or lowest rate of delay
+			<li> Compare which time blocks of a day has the lowest or highest rate of delay
+			<li> Compare the rate of delay between different flight distance
+			<li> Compare a particular airline's delay with other airlines by the airport, day of the week, and time of the day.
+		</ul>
+
+		<p> As a business traveler, you plan a trip by plane. You want to understand the possible delays at various times
+		days of the week, airlines, and airports to arrange the trip accordingly. </p>
+		<ul>
+			<li> Identify which airline has the lowest rate of delay
+			<li> Determine which airline has the lowest rate of delay for a particular route
+			<li> Compare which day of the week has the highest or lowest rate of delay
+			<li> Compare which time blocks of a day has the lowest or highest rate of delay
+			<li> Discover which airport has the lowest rate of delay in a metropolitan area
+		</ul>
+	
+	
+	<h3> Data Sources </h3>	
+		<ul>
+			<li> Kaggle's Flight delay data (https://www.kaggle.com/datasets/divyansh22/flight-delay-prediction) This data 
+			is collected from the Bureau of Transportation Statistics, Govt. of the USA. This data is open-sourced under 
+			U.S. Govt. Works. This dataset contains all the flights in the month of January 2019. There are more than 
+			580,000 flights in the month of January itself throughout the United States.
+			
+			<li> Airport data (https://vega.github.io/vega-tutorials/airports). This data set contains a list of U.S. 
+			airports in CSV (comma-separated value) format. The first column (IATA) contains a unique identifier provided 
+			by the International Air Transport Association. Subsequent columns describe the name and location of the airport, 
+			including latitude and longitude coordinates. 
+			
+			<li> Airline mapping (https://www.kaggle.com/code/miquar/explore-flights-csv-airports-csv-airlines-csv/data). 
+			It contains the mapping of IATA airline codes and names.
+
+			<li> Metropolitan Airport data. 
+			We use the metropolitan area airport code from the website (https://wikitravel.org/en/Metropolitan_Area_Airport_Codes)
+			to compose a CSV to supplement the website.
+		
+		</ul>
+		
+	
+	<h3> Future Improvement </h3>
+		<h4>Additional data</h4>
+		<p>
+		We cannot add climate change data due to the selection of time constraints, computation constraints, and base data set. 
+		Initially, we selected the Jan 2019 flight delay data from Kaggle as our base dataset. However, since it has a short 
+		time series component (31 days), adding climate change does not add too much value. If we have more time and resources 
+		(over 10 million domestic flights annually), we should consider choosing a different base data set and include additional data.
+		</p>
+
+		<h4>Further Analysis of the results</h4>
+		<p>
+		Some anecdotal evidence based on informal observation of hotel room rates and plane ticket prices shows that Friday 
+		is usually the busiest day to travel. The possible reasons include business travelers attending a weeklong meeting 
+		and returning home on Friday. In addition, leisure travelers leave on Friday for a weekend getaway. As a result, 
+		I hypothesize that Friday has the highest air traffic, which causes the highest probability of flight delay. 
+		</p>
+		<p>
+		However, our data visualization charts reveal that Thursday has the highest air traffic and also the highest number 
+		of delays. The result is counterintuitive. If we have more time, we would like to research and include more data 
+		for further investigation. 
+		</p>
+		<p>
+		We also hypothesize that a busy airport causes a higher probability of flight delays. Again, however, our charts show 
+		inconclusive results. For example, Atlanta airport is the busiest airport, but it has only an average flight delay 
+		percentage of 13%. On the other hand, although New York LaGuardia airport has only 14K flights, about half of the 
+		number of flights in Atlanta airport, LaGuardia's flight delay percentage is 28%, twice as large as Atlanta airport 
+		(13%). One possible reason is the difference in weather conditions between the airports. It is another compelling 
+		reason to explore additional data for investigation. 
+		</p>
+
+
+		<h4> Iterative Development Process </h4>
+		<p>
+		We found that the usability studies are extremely valuable. Therefore, we suggest we improve our project development 
+		process by incorporating multiple rounds of usability testing and improving our data visualization iteratively. So 
+		we must formalize and standardize the usability results. For example, we want to measure our subjects' task time, 
+		success rate, and error rate quantitatively. Qualitatively, we want to record data related to ease of use, problems 
+		experienced, and answers to open-ended questions. 
+		</p>
+
+</div>
+
+</body>
+</html>
